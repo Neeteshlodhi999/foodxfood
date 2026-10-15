@@ -1,0 +1,22 @@
+{
+  "name": "foodxfood",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Food Delivery Platform - Indian Market",
+  "workspaces": [
+    "apps/customer",
+    "apps/restaurant",
+    "apps/admin",
+    "apps/api",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace customer & npm run dev --workspace restaurant & npm run dev --workspace admin & npm run dev --workspace api",
+    "build": "npm run build --workspace customer & npm run build --workspace restaurant & npm run build --workspace admin & npm run build --workspace api",
+    "install:all": "npm install",
+    "clean": "rimraf node_modules apps/*/node_modules packages/*/node_modules apps/*/dist"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5"
+  }
+}
