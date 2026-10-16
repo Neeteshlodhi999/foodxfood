@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingCart, User, Phone } from 'lucide-react';
+import { Menu, X, ShoppingCart, User, Phone, MapPin, Search } from 'lucide-react';
 
 export function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -21,13 +20,25 @@ export function Layout() {
               </Link>
             </div>
 
+            <div className="hidden md:flex items-center space-x-2 bg-gray-100 rounded-lg px-3 py-2">
+              <MapPin className="w-4 h-4 text-orange-500" />
+              <span className="text-sm text-gray-600">Mumbai, MH</span>
+            </div>
+
             <nav className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-700 hover:text-orange-500 font-medium">Home</Link>
               <Link to="/search" className="text-gray-700 hover:text-orange-500 font-medium">Browse</Link>
               <Link to="/orders" className="text-gray-700 hover:text-orange-500 font-medium">Orders</Link>
             </nav>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
+              <Link
+                to="/search"
+                className="hidden sm:flex items-center bg-gray-100 rounded-lg px-3 py-2 text-gray-500 hover:bg-gray-200"
+              >
+                <Search className="w-4 h-4" />
+                <span className="ml-2 text-sm">Search food</span>
+              </Link>
               <button className="p-2 text-gray-600 hover:text-orange-500 relative">
                 <ShoppingCart className="w-6 h-6" />
                 <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
