@@ -1,8 +1,8 @@
 import React from 'react';
-import { ShoppingBag, Users, Restaurant, DollarSign, TrendingUp, Clock } from 'lucide-react';
+import { ShoppingBag, Users, Store, DollarSign, TrendingUp, Clock } from 'lucide-react';
 
 const stats = [
-  { label: 'Total Restaurants', value: '156', change: '+8%', icon: Restaurant, color: 'text-blue-600', bg: 'bg-blue-50' },
+  { label: 'Total Restaurants', value: '156', change: '+8%', icon: Store, color: 'text-blue-600', bg: 'bg-blue-50' },
   { label: 'Total Users', value: '12,450', change: '+15%', icon: Users, color: 'text-green-600', bg: 'bg-green-50' },
   { label: 'Total Orders', value: '3,456', change: '+22%', icon: ShoppingBag, color: 'text-purple-600', bg: 'bg-purple-50' },
   { label: 'Revenue Today', value: 'Rs 2,45,670', change: '+18%', icon: DollarSign, color: 'text-orange-600', bg: 'bg-orange-50' },

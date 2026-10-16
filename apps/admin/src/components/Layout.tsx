@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Restaurant, Users, ShoppingBag, Settings, LogOut, Shield } from 'lucide-react';
+import { LayoutDashboard, Store, Users, ShoppingBag, Settings, LogOut, Shield } from 'lucide-react';
 
 const navItems = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/restaurants', label: 'Restaurants', icon: Restaurant },
+  { to: '/restaurants', label: 'Restaurants', icon: Store },
   { to: '/users', label: 'Users', icon: Users },
   { to: '/orders', label: 'Orders', icon: ShoppingBag },
 ];
